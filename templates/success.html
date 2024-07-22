@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucess Page</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="bg-blue-600 h-screen w-full container">
+        <div class="bg-red-400 h-33 flex flex-row gap-5">
+            <h1 class="text-3xl font-bold mx-auto mt-10">
+                Welcome, <em>{{ user.username }}</em>!
+            </h1><br/><br/><br/><br/>
+            <a class="text-right text-xl mx-auto mt-10 font-bold text-blue-700 hover:text-blue-600" href="{% url 'logout' %}">
+                logout
+            </a>
+            
+        </div>
+        <hr/>
+        <p class="text-center text-3xl mt-14">
+            Congratulations! You have successfully logged in.
+        </p>
+
+    </div>
+</body>
+</html>

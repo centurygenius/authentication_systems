@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="bg-blue-600 flex h-screen w-full container">
+        <div class="bg-red-400 w-4/12 h-33">
+            <br/>
+            <nav class="mt-20">
+                <ul class="text-center">
+                    <li class="my-5"><a class="text-blue-700 font-bold hover:text-blue-500" href="{% url 'home' %}">Home</a></li>
+                    <li class="my-5"><a class="text-blue-700 font-bold hover:text-blue-500" href="{% url 'login' %}">Login</a></li>
+                    <li><a class="text-blue-700 font-bold hover:text-blue-500" href="{% url 'signup' %}">Signup</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bg-green-400 w-8/12 h-33">
+            <h1 class="text-3xl text-center font-bold mx-auto mt-20">
+                Welcome Home!
+            </h1>
+            <hr/>
+            <br/>
+            <p>
+                This is the home page. Thank you for visiting this website.
+                Please go through the menu section to register if you have not done so.
+                And if you are already registered, please login to have a feel of the website.
+            </p>
+            <br/>
+            <p>
+                This website is created for <em>authentication purpose.</em> 
+                You can login and signup to have a feel of the website.
+            </p>
+            <br/>
+            <p>
+                Thank you for visiting and using this website.
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
